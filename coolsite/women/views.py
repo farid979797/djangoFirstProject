@@ -24,7 +24,7 @@ class WomenHome(DataMixin, ListView):
         return context
 
     def get_queryset(self):
-        return Women.objects.filter(is_published=True).select_related('cat')          #select_related to fix multiply queries (django debug toolbar )
+        return Women.objects.filter(is_published=True).select_related('cat')          #select_related to fix multiply queriesfix multiply queries (django debug toolbar )
 
 # def index(request):
 #     posts = Women.objects.all()
